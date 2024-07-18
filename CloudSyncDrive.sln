@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudSyncDriveClient", "Client\CloudSyncDriveClient.csproj", "{F1594371-F8ED-4BAA-A595-60B423DCF98E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{068B665D-46AB-49A6-84E3-B5628800B2FB} = {068B665D-46AB-49A6-84E3-B5628800B2FB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{068B665D-46AB-49A6-84E3-B5628800B2FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudSyncDriveServer", "CloudSyncDriveServer\CloudSyncDriveServer.csproj", "{4EF7ECB8-24EB-491C-80BE-90C1138890A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{068B665D-46AB-49A6-84E3-B5628800B2FB} = {068B665D-46AB-49A6-84E3-B5628800B2FB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF7ECB8-24EB-491C-80BE-90C1138890A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF7ECB8-24EB-491C-80BE-90C1138890A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF7ECB8-24EB-491C-80BE-90C1138890A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF7ECB8-24EB-491C-80BE-90C1138890A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {089698C5-8968-49A3-8C0B-894B7C1190B8}
+	EndGlobalSection
+EndGlobal
