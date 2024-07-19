@@ -8,31 +8,42 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudSyncDriveClient", "Cli
 		{068B665D-46AB-49A6-84E3-B5628800B2FB} = {068B665D-46AB-49A6-84E3-B5628800B2FB}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{068B665D-46AB-49A6-84E3-B5628800B2FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{068B665D-46AB-49A6-84E3-B5628800B2FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudSyncDriveServer", "CloudSyncDriveServer\CloudSyncDriveServer.csproj", "{4EF7ECB8-24EB-491C-80BE-90C1138890A1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{068B665D-46AB-49A6-84E3-B5628800B2FB} = {068B665D-46AB-49A6-84E3-B5628800B2FB}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudSyncDriveServer", "Server\CloudSyncDriveServer.csproj", "{800055EA-2C8F-47D6-9EC6-855B22B39D7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Debug|x86.ActiveCfg = Debug|x86
+		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Debug|x86.Build.0 = Debug|x86
 		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Release|x86.ActiveCfg = Release|x86
+		{F1594371-F8ED-4BAA-A595-60B423DCF98E}.Release|x86.Build.0 = Release|x86
 		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Debug|x86.ActiveCfg = Debug|x86
+		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Debug|x86.Build.0 = Debug|x86
 		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EF7ECB8-24EB-491C-80BE-90C1138890A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EF7ECB8-24EB-491C-80BE-90C1138890A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EF7ECB8-24EB-491C-80BE-90C1138890A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EF7ECB8-24EB-491C-80BE-90C1138890A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Release|x86.ActiveCfg = Release|x86
+		{068B665D-46AB-49A6-84E3-B5628800B2FB}.Release|x86.Build.0 = Release|x86
+		{800055EA-2C8F-47D6-9EC6-855B22B39D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800055EA-2C8F-47D6-9EC6-855B22B39D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800055EA-2C8F-47D6-9EC6-855B22B39D7C}.Debug|x86.ActiveCfg = Debug|x86
+		{800055EA-2C8F-47D6-9EC6-855B22B39D7C}.Debug|x86.Build.0 = Debug|x86
+		{800055EA-2C8F-47D6-9EC6-855B22B39D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800055EA-2C8F-47D6-9EC6-855B22B39D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{800055EA-2C8F-47D6-9EC6-855B22B39D7C}.Release|x86.ActiveCfg = Release|x86
+		{800055EA-2C8F-47D6-9EC6-855B22B39D7C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
