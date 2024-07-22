@@ -1,7 +1,12 @@
 ﻿
+using System;
+using System.Threading;
+
 using static Shared.Constants;
 
 using CloudSyncDriveClient.Services;
+using Windows.Graphics.Capture;
+using System.IO;
 
 namespace CloudSyncDriveClient
 {
@@ -9,6 +14,8 @@ namespace CloudSyncDriveClient
     {
         static void Main(string[] args)
         {
+            DirectoryInfo a = new("a");
+
             Console.WriteLine("Cloud Sync Drive Client");
             Console.WriteLine($"Mouting {Dummy.SyncRoot} to {Dummy.SyncSource}");
 

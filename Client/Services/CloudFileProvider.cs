@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using CloudSyncDriveClient.Helper;
 using CloudSyncDriveClient.Services.Com;
 using Shared;
 using Windows.Storage;
 using Windows.Storage.Provider;
 using static Vanara.PInvoke.CldApi;
-using static Vanara.PInvoke.CldApi.CF_CALLBACK_PARAMETERS;
-using static Vanara.PInvoke.CldApi.CF_CALLBACK_PARAMETERS.CANCEL;
 using static Vanara.PInvoke.Kernel32;
+
+using CloudSyncDriveClient.Services.CloudFileProviderEventHandlers;
 
 namespace CloudSyncDriveClient.Services
 {
@@ -19,6 +20,7 @@ namespace CloudSyncDriveClient.Services
     {
         private static string? mountPoint { get; set; }
         private static CF_CONNECTION_KEY connectionKey;
+        private static readonly object _lock = new();
 
         public static void Start(string mountPoint)
         {
@@ -40,8 +42,11 @@ namespace CloudSyncDriveClient.Services
             if (mountPoint == null)
                 return;
 
-            Unmount();
-            ComServiceManager.StopComServices();
+            lock (_lock)
+            {
+                Unmount();
+                ComServiceManager.StopComServices();
+            }
         }
 
         private static void Mount(string mountPoint)
@@ -115,7 +120,7 @@ namespace CloudSyncDriveClient.Services
                 new CF_CALLBACK_REGISTRATION
                 {
                     Type = CF_CALLBACK_TYPE.CF_CALLBACK_TYPE_FETCH_PLACEHOLDERS,
-                    Callback = CloudFileSyncHandlers.OnFetchPlaceHolders,
+                    Callback = OnFetchPlaceHolders.Handler,
                 },
                 new CF_CALLBACK_REGISTRATION
                 {
@@ -140,6 +145,11 @@ namespace CloudSyncDriveClient.Services
         private static void UnRegisterCloudFileEventHandlers()
         {
             CfDisconnectSyncRoot(connectionKey).ThrowIfFailed();
+        }
+
+        public static object GetSyncRootLock()
+        {
+            return _lock;
         }
     }
 }

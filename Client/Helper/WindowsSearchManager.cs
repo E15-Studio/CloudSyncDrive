@@ -1,5 +1,6 @@
-﻿using static Vanara.PInvoke.SearchApi;
+﻿using System;
 using Vanara.InteropServices;
+using static Vanara.PInvoke.SearchApi;
 
 namespace CloudSyncDriveClient.Helper
 {

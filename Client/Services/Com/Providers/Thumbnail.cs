@@ -8,6 +8,8 @@ using static Vanara.PInvoke.Kernel32;
 using static Vanara.PInvoke.Shell32;
 using static Vanara.PInvoke.ShlwApi;
 
+using System.IO;
+
 using Shared;
 
 using Vanara.InteropServices;

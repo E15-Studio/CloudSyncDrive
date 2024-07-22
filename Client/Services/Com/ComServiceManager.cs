@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using static Vanara.PInvoke.Kernel32;
 using static Vanara.PInvoke.Ole32;
 using Vanara.PInvoke;
